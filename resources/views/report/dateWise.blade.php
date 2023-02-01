@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="offset-md-3 col-md-6">
-                    <h2 class="admin-heading text-center">Date Wise Book Issue Report</h2>
+                    <h2 class="admin-heading text-center">Ngày báo cáo sách cho mượn</h2>
                 </div>
             </div>
             <div class="row">
@@ -19,7 +19,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" class="btn btn-danger" name="search_date" value="Search">
+                        <input type="submit" class="btn btn-danger" name="search_date" value="Tìm kiếm">
                     </form>
                 </div>
             </div>
@@ -28,12 +28,12 @@
                     <div class="col-md-12">
                         <table class="content-table">
                             <thead>
-                                <th>S.No</th>
-                                <th>Student Name</th>
-                                <th>Book Name</th>
-                                <th>Phone</th>
+                                <th>STT</th>
+                                <th>Họ tên</th>
+                                <th>Tên sách</th>
+                                <th>Điện thoại</th>
                                 <th>Email</th>
-                                <th>Issue Date</th>
+                                <th>Ngày cho mượn</th>
                             </thead>
                             <tbody>
                                 @forelse ($books as $book)
@@ -47,7 +47,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="10">No Record Found!</td>
+                                        <td colspan="10">Không tìm thấy bản ghi nào!</td>
                                     </tr>
                                 @endforelse
                             </tbody>

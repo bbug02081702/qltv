@@ -5,10 +5,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">All Books</h2>
+                    <h2 class="admin-heading">Tất cả sách</h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
-                    <a class="add-new" href="{{ route('book.create') }}">Add Book</a>
+                    <a class="add-new" href="{{ route('book.create') }}">Thêm</a>
                 </div>
             </div>
             <div class="row">
@@ -16,14 +16,14 @@
                     <div class="message"></div>
                     <table class="content-table">
                         <thead>
-                            <th>S.No</th>
-                            <th>Book Name</th>
-                            <th>Category</th>
-                            <th>Author</th>
-                            <th>Publisher</th>
-                            <th>Status</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th>STT</th>
+                            <th>Tên sách</th>
+                            <th>Thể  loại</th>
+                            <th>Tác giả</th>
+                            <th>Nhà xuất bản</th>
+                            <th>Trạng thái</th>
+                            <th>Sửa</th>
+                            <th>Xóa</th>
                         </thead>
                         <tbody>
                             @forelse ($books as $book)
@@ -35,25 +35,25 @@
                                     <td>{{ $book->publisher->name }}</td>
                                     <td>
                                         @if ($book->status == 'Y')
-                                            <span class='badge badge-success'>Available</span>
+                                            <span class='badge badge-success'>Có sẵn</span>
                                         @else
-                                            <span class='badge badge-danger'>Issued</span>
+                                            <span class='badge badge-danger'>Chưa có</span>
                                         @endif
                                     </td>
                                     <td class="edit">
-                                        <a href="{{ route('book.edit', $book) }}" class="btn btn-success">Edit</a>
+                                        <a href="{{ route('book.edit', $book) }}" class="btn btn-success">Sửa</a>
                                     </td>
                                     <td class="delete">
                                         <form action="{{ route('book.destroy', $book) }}" method="post"
                                             class="form-hidden">
-                                            <button class="btn btn-danger delete-book">Delete</button>
+                                            <button class="btn btn-danger delete-book">Xóa</button>
                                             @csrf
                                         </form>
                                     </td>
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="8">No Books Found</td>
+                                    <td colspan="8">Không tìm thấy sách</td>
                                 </tr>
                             @endforelse
                         </tbody>

@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Update Student</h2>
+                    <h2 class="admin-heading">Cập nhật sinh viên</h2>
                 </div>
             </div>
             <div class="row">
@@ -13,8 +13,8 @@
                         autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Student Name</label>
-                            <input type="text" class="form-control" placeholder="Student Name" name="name"
+                            <label>Họ tên</label>
+                            <input type="text" class="form-control" placeholder="Họ tên" name="name"
                                 value="{{ $student->name }}" required>
                             @error('name')
                                 <div class="alert alert-danger" role="alert">
@@ -23,8 +23,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Address</label>
-                            <input type="text" class="form-control" placeholder="Address" name="address"
+                            <label>Địa chỉ</label>
+                            <input type="text" class="form-control" placeholder="Địa chỉ" name="address"
                                 value="{{ $student->address }}" required>
                             @error('address')
                                 <div class="alert alert-danger" role="alert">
@@ -33,12 +33,12 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Gender</label>
+                            <label>Giới tính</label>
                             <select name="gender" class="form-control">
-                                @if ($student->gneder == 'male')
-                                    <option value="male" selected>Male</option>
+                                @if ($student->gender == 'male')
+                                    <option value="male" selected>Nam</option>
                                 @else
-                                    <option value="female" selected>Female</option>
+                                    <option value="female" selected>Nữ</option>
                                 @endif
                             </select>
                             @error('gender')
@@ -48,8 +48,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Class</label>
-                            <input type="text" class="form-control" placeholder="Class" name="class"
+                            <label>Lớp</label>
+                            <input type="text" class="form-control" placeholder="Lớp" name="class"
                                 value="{{ $student->class }}" required>
                             @error('class')
                                 <div class="alert alert-danger" role="alert">
@@ -58,7 +58,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Age</label>
+                            <label>Tuổi</label>
                             <input type="number" class="form-control" placeholder="Age" name="age"
                                 value="{{ $student->age }}" required>
                             @error('age')
@@ -68,8 +68,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Phone</label>
-                            <input type="phone" class="form-control" placeholder="Phone" name="phone"
+                            <label>Điện thoại</label>
+                            <input type="phone" class="form-control" placeholder="Điện thoại" name="phone"
                                 value="{{ $student->phone }}" required>
                             @error('phone')
                                 <div class="alert alert-danger" role="alert">
@@ -87,7 +87,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="Update">
+                        <input type="submit" name="save" class="btn btn-danger" value="Cập nhật">
                     </form>
                 </div>
             </div>

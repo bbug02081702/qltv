@@ -19,7 +19,8 @@ ul{
     background: #F6F6F6;
 }
 .logo img{
-    width: 100%;
+    width: 50px;
+    height: auto;
 }
 .dropdown{
     text-align: right;

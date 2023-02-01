@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Add Student</h2>
+                    <h2 class="admin-heading">Thêm sinh viên</h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
-                    <a class="add-new" href="{{ route('students') }}">All Students</a>
+                    <a class="add-new" href="{{ route('students') }}">Tất cả sinh viên</a>
                 </div>
             </div>
             <div class="row">
@@ -16,7 +16,7 @@
                         @csrf
                         <div class="form-group">
                             <label>Student Name</label>
-                            <input type="text" class="form-control" placeholder="Student Name" name="name"
+                            <input type="text" class="form-control" placeholder="Họ tên" name="name"
                                 value="{{ old('name') }}" required>
                             @error('name')
                                 <div class="alert alert-danger" role="alert">
@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <label>Address</label>
-                            <input type="text" class="form-control" placeholder="Address" name="address"
+                            <input type="text" class="form-control" placeholder="Địa chỉ" name="address"
                                 value="{{ old('address') }}" required>
                             @error('address')
                                 <div class="alert alert-danger" role="alert">
@@ -35,10 +35,10 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Gender</label>
+                            <label>Giới tính</label>
                             <select name="gender" class="form-control">
-                                <option value="male" selected>Male</option>
-                                <option value="female">Female</option>
+                                <option value="male" selected>Nam</option>
+                                <option value="female">Nữ</option>
                             </select>
                             @error('gender')
                                 <div class="alert alert-danger" role="alert">
@@ -47,8 +47,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Class</label>
-                            <input type="text" class="form-control" placeholder="Class" name="class"
+                            <label>Lớp</label>
+                            <input type="text" class="form-control" placeholder="Lớp" name="class"
                                 value="{{ old('class') }}" required>
                             @error('class')
                                 <div class="alert alert-danger" role="alert">
@@ -57,8 +57,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Age</label>
-                            <input type="number" class="form-control" placeholder="Age" name="age"
+                            <label>Tuổi</label>
+                            <input type="number" class="form-control" placeholder="Tuổi" name="age"
                                 value="{{ old('age') }}" required>
                             @error('age')
                                 <div class="alert alert-danger" role="alert">
@@ -67,8 +67,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Phone</label>
-                            <input type="phone" class="form-control" placeholder="Phone" name="phone"
+                            <label>Diện thoại</label>
+                            <input type="phone" class="form-control" placeholder="Điện thoại" name="phone"
                                 value="{{ old('phone') }}" required>
                             @error('phone')
                                 <div class="alert alert-danger" role="alert">
@@ -86,7 +86,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="save">
+                        <input type="submit" name="save" class="btn btn-danger" value="Lưu">
                     </form>
                 </div>
             </div>

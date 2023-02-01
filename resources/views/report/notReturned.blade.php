@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="offset-md-3 col-md-6">
-                    <h2 class="admin-heading text-center">Not Returned Books</h2>
+                    <h2 class="admin-heading text-center">Sách Không Trả Lại</h2>
                 </div>
             </div>
             @if ($books)
@@ -12,14 +12,14 @@
                     <div class="col-md-12">
                         <table class="content-table">
                             <thead>
-                                <th>S.No</th>
-                                <th>Student Name</th>
-                                <th>Book Name</th>
-                                <th>Phone</th>
+                                <th>STT</th>
+                                <th>Họ tên</th>
+                                <th>Tên sách</th>
+                                <th>Điện thoại</th>
                                 <th>Email</th>
-                                <th>Issue Date</th>
-                                <th>Return Date</th>
-                                <th>Over Days</th>
+                                <th>Ngày mượn sách</th>
+                                <th>Ngày trả sách</th>
+                                <th>Qua ngày</th>
                             </thead>
                             <tbody>
                                 @forelse ($books as $book)
@@ -37,12 +37,12 @@
                                               $diff = date_diff($date1,$date2);
                                               echo $days = $diff->format('%a days');
                                             }else{
-                                              echo '0 days';
+                                              echo '0 ngày';
                                             } @endphp</td>
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="10">No Record Found!</td>
+                                        <td colspan="10">Không tìm thấy bản ghi!</td>
                                     </tr>
                                 @endforelse
                             </tbody>

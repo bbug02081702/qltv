@@ -18,18 +18,19 @@
             <div class="row">
                 <div class="offset-md-4 col-md-4">
                     <div class="logo">
-                        <a href="#"><img src="{{ asset('images/library.png') }}"></a>
+                        <!-- <a href="#"><img src="{{ asset('images/l.jpg') }}"></a> -->
+                       
                     </div>
                 </div>
                 <div class="offset-md-2 col-md-2">
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Hi {{ auth()->user()->name }}
+                            Xin chào {{ auth()->user()->name }}
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="{{ route('change_password') }}">Change Password</a>
-                            <a class="dropdown-item" href="#" onclick="document.getElementById('logoutForm').submit()">Log Out</a>
+                            <a class="dropdown-item" href="{{ route('change_password') }}">Đổi mật khẩu</a>
+                            <a class="dropdown-item" href="#" onclick="document.getElementById('logoutForm').submit()">Đăng xuất</a>
                         </div>
                         <form method="post" id="logoutForm" action="{{ route('logout') }}">
                             @csrf
@@ -45,15 +46,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <ul class="menu">
-                        <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                        <li><a href="{{ route('authors') }}">Authors</a></li>
-                        <li><a href="{{ route('publishers') }}">Publishers</a></li>
-                        <li><a href="{{ route('categories') }}">Categories</a></li>
-                        <li><a href="{{ route('books') }}">Books</a></li>
-                        <li><a href="{{ route('students') }}">Reg Students</a></li>
-                        <li><a href="{{ route('book_issued') }}">Book Issue</a></li>
-                        <li><a href="{{ route('reports') }}">Reports</a></li>
-                        <li><a href="{{ route('settings') }}">Settings</a></li>
+                        <li><a href="{{ route('dashboard') }}">Tổng quan</a></li>
+                        <li><a href="{{ route('authors') }}">Tác giả</a></li>
+                        <li><a href="{{ route('publishers') }}">Nhà xuất bản</a></li>
+                        <li><a href="{{ route('categories') }}">Thể loại</a></li>
+                        <li><a href="{{ route('books') }}">Sách</a></li>
+                        <li><a href="{{ route('students') }}">Đăng ký sinh viên</a></li>
+                        <li><a href="{{ route('book_issued') }}">Sách đã mượn</a></li>
+                        <li><a href="{{ route('reports') }}">Báo cáo</a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -67,7 +68,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <span>© Copyright 2021 <a href="https://www.yahoobaba.net">YahooBaba 😎</a></span>
+                    <span>© Copyright 2023 <a href="#">Nhóm test</a></span>
                 </div>
             </div>
         </div>

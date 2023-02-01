@@ -12,7 +12,7 @@
                     <form class="yourform" action="{{ route('settings') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Return Days</label>
+                            <label>Ngày trả</label>
                             <input type="number" class="form-control" name="return_days" value="{{ $data->return_days }}"
                                 required>
                             @error('return_days')
@@ -30,7 +30,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" class="btn btn-danger" value="Update" required>
+                        <input type="submit" class="btn btn-danger" value="Cập nhật" required>
                     </form>
                 </div>
             </div>

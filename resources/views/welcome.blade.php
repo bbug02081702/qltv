@@ -5,9 +5,9 @@
         <div class="container">
             <div class="row">
                 <div class="offset-md-4 col-md-4">
-                    <div class="logo border border-danger">
+                    <!-- <div class="logo border border-danger">
                         <img src="{{ asset('images/library.png') }}" alt="">
-                    </div>
+                    </div> -->
                     <form class="yourform" action="{{ route('login') }}" method="post">
                         @csrf
                         <h3 class="heading">Admin Login</h3>

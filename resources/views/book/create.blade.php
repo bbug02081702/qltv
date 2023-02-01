@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Add Book</h2>
+                    <h2 class="admin-heading">Thêm sách</h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
-                    <a class="add-new" href="{{ route('books') }}">All Books</a>
+                    <a class="add-new" href="{{ route('books') }}">Tất cả sách</a>
                 </div>
             </div>
             <div class="row">
@@ -15,9 +15,9 @@
                     <form class="yourform" action="{{ route('book.store') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Book Name</label>
+                            <label>Tên sách</label>
                             <input type="text" class="form-control @error('name') isinvalid @enderror"
-                                placeholder="Book Name" name="name" value="{{ old('name') }}" required>
+                                placeholder="Tên sách" name="name" value="{{ old('name') }}" required>
                             @error('name')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
@@ -25,9 +25,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Category</label>
+                            <label>Thể  loại</label>
                             <select class="form-control @error('category_id') isinvalid @enderror " name="category_id" required>
-                                <option value="">Select Category</option>
+                                <option value="">Chọn thể  loại</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
@@ -39,9 +39,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Author</label>
+                            <label>Tác giả</label>
                             <select class="form-control @error('auther_id') isinvalid @enderror " name="auther_id" required>
-                                <option value="">Select Author</option>
+                                <option value="">Chọn tác giả</option>
                                 @foreach ($authors as $author)
                                     <option value='{{ $author->id }}'>{{ $author->name }}</option>";
                                 @endforeach
@@ -53,9 +53,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Publisher</label>
+                            <label>Nhà xuất bản</label>
                             <select class="form-control @error('publisher_id') isinvalid @enderror " name="publisher_id" required>
-                                <option value="">Select Publisher</option>
+                                <option value="">Chọn nhà xuất bản</option>
                                 @foreach ($publishers as $publisher)
                                     <option value='{{ $publisher->id }}'>{{ $publisher->name }}</option>";
                                 @endforeach
@@ -66,7 +66,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="save" required>
+                        <input type="submit" name="save" class="btn btn-danger" value="Lưu" required>
                     </form>
                 </div>
             </div>

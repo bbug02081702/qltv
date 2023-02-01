@@ -35,7 +35,7 @@ class dashboardController extends Controller
     {
         if (Auth::check(["username" => auth()->user()->username, "password" => $request->c_password])) {
             auth()->user()->password = bcrypt($request->password);
-            return redirect()->back()->with(['message' => "Password Changed Successfully!."]);
+            return redirect()->back()->with(['message' => "Mật khẩu đã thay đổi thành công!."]);
         } else {
             return "";
         }
