@@ -15,7 +15,7 @@
                     <form class="yourform" action="{{ route('student.store') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Student Name</label>
+                            <label>Họ tên</label>
                             <input type="text" class="form-control" placeholder="Họ tên" name="name"
                                 value="{{ old('name') }}" required>
                             @error('name')
@@ -25,7 +25,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Address</label>
+                            <label>Địa chỉ</label>
                             <input type="text" class="form-control" placeholder="Địa chỉ" name="address"
                                 value="{{ old('address') }}" required>
                             @error('address')

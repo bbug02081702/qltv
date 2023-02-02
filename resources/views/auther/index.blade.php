@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">All Authors</h2>
+                    <h2 class="admin-heading">Tất cả tác giả</h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
                     <a class="add-new" href="{{ route('authors.create') }}">Thêm</a>
